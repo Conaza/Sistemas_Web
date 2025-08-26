@@ -34,7 +34,12 @@ export default function Login() {
 
       alert(res.data.message);
 
-    
+      // redireciona baseado no role (não funciona tive que adicionar o caso fixo no topo do codigo)
+      if (res.data.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/profile");
+      }
     } catch (err: any) {
       alert(err?.response?.data?.message || "Erro ao fazer login");
     } finally {

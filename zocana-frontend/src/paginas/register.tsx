@@ -12,7 +12,7 @@ function Register() {
     e.preventDefault();
     setLoading(true);
     try {
-      await api.post("/register", { username, password });
+      await api.post("/api/register", { username, password });
       alert("Cadastro realizado com sucesso!");
       navigate("/login");
     } catch (err: any) {
