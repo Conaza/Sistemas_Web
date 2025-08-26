@@ -1,0 +1,33 @@
+:root{
+  --z-primary: #000;
+  --z-bg: #f6f6f6;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--z-bg); }
+
+/* LOGO apenas na Home (renderizada pela Navbar condicionalmente) */
+.logo-home { max-height: 120px; }
+
+/* FAIXA PRETA com botões brancos, sem borda arredondada e pouco espaçamento */
+.nav-band {
+  background: #000;
+  padding: 10px 12px;
+  border-bottom: 1px solid #111;
+}
+.nav-band .btn {
+  border-radius: 0 !important;
+  margin: 0 2px !important;
+}
+
+/* Container de cards genéricos */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+/* Caixa central de Login/Register */
+.login-box { width: 360px; }
+
+/* Footer */
+.footer { width: 100%; }
