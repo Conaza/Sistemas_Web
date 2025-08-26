@@ -13,13 +13,12 @@ let pedidos = [];
 app.post("/api/register", (req, res) => {
   const { username, password } = req.body;
 
-  // impedir duplicados
+  // impede usuarios duplicados
   const existe = usuarios.find((u) => u.username === username);
   if (existe) {
     return res.status(400).json({ message: "Usuário já existe" });
   }
 
-  // admin não é registrado manualmente
   if (username === "admin") {
     return res.status(400).json({ message: "Esse usuário é reservado" });
   }
